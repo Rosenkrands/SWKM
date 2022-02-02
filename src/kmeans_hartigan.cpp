@@ -13,7 +13,7 @@ mat CalEucDist(mat X,mat C){
   for(unsigned int i=0;i<C.n_rows;++i){
     temp=X.each_row()-C.row(i);
     temp=temp%temp;
-    Dis.col(i)=sum(temp,1);
+    Dis.col(i)=sqrt(sum(temp,1));
   }
   return Dis;
 }
